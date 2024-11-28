@@ -146,3 +146,4 @@ C:\Users\samue\Projetos\SmileMarks\obj\Debug\net8.0\refint\SmileMarks.dll
 C:\Users\samue\Projetos\SmileMarks\obj\Debug\net8.0\SmileMarks.pdb
 C:\Users\samue\Projetos\SmileMarks\obj\Debug\net8.0\SmileMarks.genruntimeconfig.cache
 C:\Users\samue\Projetos\SmileMarks\obj\Debug\net8.0\ref\SmileMarks.dll
+C:\Users\samue\Projetos\SmileMarks\obj\Debug\net8.0\SmileMarks.sourcelink.json
