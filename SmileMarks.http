@@ -1,0 +1,6 @@
+@SmileMarks_HostAddress = http://localhost:5215
+
+GET {{SmileMarks_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
