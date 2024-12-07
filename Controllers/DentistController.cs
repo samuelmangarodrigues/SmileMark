@@ -1,42 +1,64 @@
-using Azure;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using SmileMarks.Controllers.Interfaces;
-using SmileMarks.Data;
-using SmileMarks.Models;
+using SmileMarks.DTOs;
+using SmileMarks.Enums;
+using SmileMarks.Services;
+using SmileMarks.Services.Interfaces;
 
 namespace SmileMarks.Controllers;
 
-[ApiController]
 [Route("api/v1/dentist")]
-public class DentistController : ControllerBase, IDentistController
+[ApiController]
+public class DentistController(IDentistService dentistService) : ControllerBase, IDentistController
 {
+    private readonly IDentistService _dentistService = dentistService;
 
     [HttpPost]
-    public ActionResult CreateDentist(Dentist dentist)
+    public async Task<IActionResult> CreateDentist([FromBody] CreateDentistDto dentist)
+    {
+        var newDentistResult = await _dentistService.CreateDentist(dentist);
+
+        return Ok(newDentistResult);
+    }
+
+    [HttpGet("get_all_dentist")]
+    public IActionResult GetScheduleAndPatientDetails()
+    {
+        return Ok("Deu certo");
+    }
+
+    [HttpGet("get_all_schedules")]
+    public IActionResult GetSchedules()
     {
         throw new NotImplementedException();
     }
 
-    [HttpPut]
-    public OkObjectResult AddSchedules()
+    [HttpPatch("add_avaiable_schedules/{dentistId:guid}")]
+    public async Task<IActionResult> AddSchedules(Guid dentistId, [FromBody] AddScheduleDto newSchedule)
     {
-        throw new NotImplementedException();
-    }
+        var scheduleResult = await _dentistService.AddSchedules(dentistId, newSchedule);
 
-    [HttpGet]
-    public ActionResult GetSchedules()
-    {
-        throw new NotImplementedException();
-    }
+        if (scheduleResult.IsT0)
+        {
+            var result = scheduleResult.AsT0;
 
-    [HttpGet]
-    public ActionResult GetScheduleAndPatientDetails()
-    {
-        throw new NotImplementedException();
+            return Ok(result.Message);
+        }
+
+        var errorObject = scheduleResult.AsT1;
+
+        return errorObject.Type switch
+        {
+            ETypeError.Conflict => Conflict(errorObject.Message),
+            ETypeError.NotFound => NotFound(errorObject.Message),
+            ETypeError.BadRequest => BadRequest(errorObject.Message),
+            _ => BadRequest("Unknown Error")
+        };
     }
 
     [HttpPatch]
-    public ActionResult RescheduleAnAppointment()
+    public IActionResult RescheduleAnAppointment()
     {
         throw new NotImplementedException();
     }
