@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmileMarks")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+325f6c5482913a54e759333e55af235c42d3574b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84bfe055a21cba5ed7e7e2bc18d9d1b1c669e72c")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmileMarks")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmileMarks")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

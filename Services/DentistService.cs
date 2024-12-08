@@ -25,7 +25,8 @@ public class DentistService(AppDbContext context) : IDentistService
 
     public async Task<OneOf<SuccessAddSchedule, AppError>> AddSchedules(Guid dentistId, AddScheduleDto dateRequest)
     {
-        var dentist = await _context.Dentist.FindAsync(dentistId);
+        var dentist = await _context.Dentist.Include(d => d.AvaiableSchedules)
+            .FirstOrDefaultAsync(d => d.Id == dentistId);
 
         if (dentist == null) return new NotFoundDentist();
 
@@ -43,8 +44,9 @@ public class DentistService(AppDbContext context) : IDentistService
             ScheduleDate = dateRequest.ScheduleDate,
         };
 
-        dentist.AvaiableSchedules.Add(schedule);
+        await _context.Schedule.AddAsync(schedule);
         await _context.SaveChangesAsync();
+
 
         return new SuccessAddSchedule("Sucesso ao registrar um novo horário!");
     }
