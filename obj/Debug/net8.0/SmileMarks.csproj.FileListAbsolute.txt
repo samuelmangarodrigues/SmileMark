@@ -8,6 +8,7 @@ C:\Users\samue\Projetos\SmileMarks\bin\Debug\net8.0\SmileMarks.pdb
 C:\Users\samue\Projetos\SmileMarks\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\samue\Projetos\SmileMarks\bin\Debug\net8.0\Azure.Identity.dll
 C:\Users\samue\Projetos\SmileMarks\bin\Debug\net8.0\Humanizer.dll
+C:\Users\samue\Projetos\SmileMarks\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\samue\Projetos\SmileMarks\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\samue\Projetos\SmileMarks\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\samue\Projetos\SmileMarks\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -43,6 +44,7 @@ C:\Users\samue\Projetos\SmileMarks\bin\Debug\net8.0\Microsoft.OpenApi.dll
 C:\Users\samue\Projetos\SmileMarks\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 C:\Users\samue\Projetos\SmileMarks\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\samue\Projetos\SmileMarks\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\samue\Projetos\SmileMarks\bin\Debug\net8.0\OneOf.dll
 C:\Users\samue\Projetos\SmileMarks\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\samue\Projetos\SmileMarks\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\samue\Projetos\SmileMarks\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -147,4 +149,4 @@ C:\Users\samue\Projetos\SmileMarks\obj\Debug\net8.0\refint\SmileMarks.dll
 C:\Users\samue\Projetos\SmileMarks\obj\Debug\net8.0\SmileMarks.pdb
 C:\Users\samue\Projetos\SmileMarks\obj\Debug\net8.0\SmileMarks.genruntimeconfig.cache
 C:\Users\samue\Projetos\SmileMarks\obj\Debug\net8.0\ref\SmileMarks.dll
-C:\Users\samue\Projetos\SmileMarks\bin\Debug\net8.0\OneOf.dll
+C:\Users\samue\Projetos\SmileMarks\bin\Debug\net8.0\BCrypt.Net-Next.dll

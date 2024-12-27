@@ -7,7 +7,8 @@ public interface IDentistController
 {
     public Task<IActionResult> CreateDentist(CreateDentistDto dentist);
     public Task<IActionResult> AddSchedules(Guid dentistId, AddScheduleDto newSchedule);
-    public IActionResult GetSchedules();
-    public IActionResult GetScheduleAndPatientDetails();
+    public Task<IActionResult> GetDentistById(Guid dentistId);
+    public Task<IActionResult> Login([FromBody] LoginDto credentials);
+    public Task<IActionResult> GetAllDentists();
     public IActionResult RescheduleAnAppointment();
 }

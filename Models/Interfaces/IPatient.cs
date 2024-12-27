@@ -1,6 +1,6 @@
 ﻿namespace SmileMarks.Models.Interfaces;
 
-public interface IPatient : IPerson
+public interface IPatient : IUser
 {
     string Symptom { get; set; }
     Guid ScheduleId { get; set; }

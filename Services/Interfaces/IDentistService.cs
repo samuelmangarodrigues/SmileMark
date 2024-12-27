@@ -7,9 +7,10 @@ namespace SmileMarks.Services.Interfaces;
 
 public interface IDentistService
 {
-    Task<Dentist> CreateDentist(CreateDentistDto newDentistRequest);
-    Task<OneOf<SuccessAddSchedule, AppError>> AddSchedules(Guid dentistId, AddScheduleDto dateRequest);
-    string GetSchedules();
-    string GetScheduleAndPatientDetails();
+    Task<OneOf<Dentist, AppError>> CreateDentist(CreateDentistDto newDentistRequest);
+    Task<OneOf<SuccessResponse, AppError>> AddSchedules(Guid dentistId, AddScheduleDto dateRequest);
+    Task<IEnumerable<DentistDto>> GetAllDentist();
+    Task<OneOf<DentistDto, AppError>> GetDentistById(Guid dentistId);
+    Task<OneOf<SuccessResponse, AppError>> Login(LoginDto credentials);
     string RescheduleAnAppointment();
 }
